@@ -4,8 +4,8 @@ import "./../styles/App.css";
 function ListItem(props) {
     const [editedItem, setEditedItem] = useState(props.item);
     const [editMode,setEditMode] = useState(false);
-    const editedItemchanged=(evt)=>{
-		seteditedItem(evt.target.value)
+    const editedItemChanged=(evt)=>{
+		setEditedItem(evt.target.value)
     };
 
     const saveEditedItem=()=>{
@@ -24,7 +24,7 @@ function ListItem(props) {
             ></textarea>
             <button 
                 className="saveTask" 
-                onClick={seteditedItem} 
+                onClick={setEditedItem} 
                 disabled={editedItem.trim().length===0}
                >
                 save Task
