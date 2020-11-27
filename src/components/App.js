@@ -4,23 +4,22 @@ import "./../styles/App.css";
 
 function App() {
 	const [items, setItems]=useState([]);
-	const [newitems, setNewItem]=useState("");
+	const [newItem, setNewItem]=useState("");
 	const addItem= () => {
 		items.push(newItem);
 		setItems([...items]);
 		setNewItem("");
-
 	};
 	const newItemchanged=(evt)=>{
 		setNewItem(evt.target.value)
 	};
 	const deleteHandler=(itemIdx)=>{
 		items.splice(itemIdx,1);
-		setItems([...item])
+		setItems([...items])
 	};
-	const editHandler=(editedvalue, itemIdx) => {
-		items[itemIdex]=editedvalue;
-		setItems([...item])
+	const editHandler=(editedValue, itemIdx) => {
+		items[itemIdx]=editedValue;
+		setItems([...items])
 	}
 	return (
 	<div id="main">

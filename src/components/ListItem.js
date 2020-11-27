@@ -16,20 +16,20 @@ function ListItem(props) {
         <div className="list">
             {editMode? (
             <>
-            <textarea 
-                className="editTask" 
-                onChange={editedItemChanged} 
-                placeholder="Edit Task"
-                value={editedItem}
-            ></textarea>
-            <button 
-                className="saveTask" 
-                onClick={setEditedItem} 
-                disabled={editedItem.trim().length===0}
-               >
-                save Task
-            </button>
-            </>
+                <textarea 
+                    className="editTask" 
+                    onChange={editedItemChanged} 
+                    placeholder="Edit Task"
+                    value={editedItem}
+                ></textarea>
+                <button 
+                    className="saveTask" 
+                    onClick={setEditedItem} 
+                    disabled={editedItem.trim().length===0}
+                >
+                    save Task
+                </button>
+                </>
             ) : (
             <>
                 {props.item}
