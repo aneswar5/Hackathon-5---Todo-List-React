@@ -24,7 +24,7 @@ function ListItem(props) {
                 ></textarea>
                 <button 
                     className="saveTask" 
-                    onClick={setEditedItem} 
+                    onClick={saveEditedItem} 
                     disabled={editedItem.trim().length===0}
                 >
                     save Task
