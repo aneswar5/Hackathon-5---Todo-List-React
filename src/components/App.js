@@ -10,15 +10,15 @@ function App() {
 		setItems([...items]);
 		setNewItem("");
 
-	}
+	};
 	const newItemchanged=(evt)=>{
 		setNewItem(evt.target.value)
-	}
+	};
 	const deleteHandler=(itemIdx)=>{
 		items.splice(itemIdx,1);
 		setItems([...item])
-	}
-	const deleteHandler=(editedvalue, itemIdx) => {
+	};
+	const editHandler=(editedvalue, itemIdx) => {
 		items[itemIdex]=editedvalue;
 		setItems([...item])
 	}
@@ -37,11 +37,11 @@ function App() {
 		{items.map((item,idx)=>(
 			<ListItem 
 				item={item} 
-				key={idx} 
+				key={'${item}-${idx}'}
+				idx={idx} 
 				editHandler={editHandler} 
 				deleteHandler={deleteHandler}/>
 		))}
-
 	</div>
 	);
 }
